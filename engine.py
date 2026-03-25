@@ -7,7 +7,7 @@ from scipy.spatial import cKDTree
 # 🔹 Load ATM data ONCE
 # ==============================
 
-atm_df = pd.read_excel("all_atm_FINAL.xlsx")
+atm_df = pd.read_feather("cache_atm.feather")
 
 # --- Clean coordinates ---
 atm_df["Latitude"] = pd.to_numeric(atm_df["Latitude"], errors="coerce")
